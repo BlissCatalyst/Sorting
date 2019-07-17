@@ -22,6 +22,19 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
 
+    iterate = True
+    while iterate == True:
+        if len(arr) <= 0:
+            iterate = False
+        changed = False
+        for i in range(0, len(arr) - 1):
+            if i == (len(arr) - 2) and changed == False:
+                iterate = False
+            elif arr[i] > arr[i + 1]:
+                switch = arr[i]
+                arr[i] = arr[i + 1]
+                arr[i + 1] = switch
+                changed = True
     return arr
 
 
